@@ -5,7 +5,7 @@
 
 int main()
 {
-	CNodeStatic c_root;
+	/*CNodeStatic c_root;
 	c_root.vAddNewChild();
 	c_root.vAddNewChild();
 	c_root.pcGetChild(0)->vSetValue(1);
@@ -28,7 +28,7 @@ int main()
 	CTreeStatic.pcGetRoot()->vAddNewChild();
 	CTreeStatic.pcGetRoot()->vAddNewChild();
 	CTreeStatic.vPrintTree();
-	cout << endl;
+	cout << endl;*/
 
 	///////////////////////////////////////////////////////////////
 	CNodeDynamic CNodeDynamic;
@@ -47,7 +47,7 @@ int main()
 	CNodeDynamic.vPrintAllBelow();
 
 	//////////////////////////////////////////////////////////
-	cout << endl;
+	/*cout << endl;
 	CTreeDynamic CTreeDynamic;
 	CTreeDynamic.pcGetRoot()->vAddNewChild();
 	CTreeDynamic.pcGetRoot()->vAddNewChild();
@@ -61,6 +61,6 @@ int main()
 	CTreeDynamic.pcGetRoot()->pcGetChild(1)->vAddNewChild();
 	CTreeDynamic.pcGetRoot()->pcGetChild(1)->pcGetChild(0)->vSetValue(21);
 	CTreeDynamic.pcGetRoot()->pcGetChild(1)->pcGetChild(1)->vSetValue(22);
-	CTreeDynamic.vPrintTree();
-
+	CTreeDynamic.vPrintTree();*/
+	system("pause");
 }
