@@ -2,18 +2,13 @@
 
 
 
-CNodeDynamic::CNodeDynamic()
-{
-}
-
-
 CNodeDynamic::~CNodeDynamic()
 {
 }
 
 void CNodeDynamic::vAddNewChild()
 {
-	CNodeDynamic *c;
+	CNodeDynamic *c = new CNodeDynamic;
 	c->pc_parent_node = this;
 	v_children.push_back(c);
 }
@@ -39,7 +34,7 @@ void CNodeDynamic::vPrintAllBelow()
 	for (int i = 0; i < this->iGetChildrenNumber(); i++)
 	{
 
-		this->v_children[i].vPrintAllBelow();
+		this->v_children[i]->vPrintAllBelow();
 
 	}
 }

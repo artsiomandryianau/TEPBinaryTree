@@ -1,5 +1,6 @@
 #include "CNodeStatic.h"
 #include "CTreeStatic.h"
+#include "CNodeDynamic.h"
 
 
 int main()
@@ -27,4 +28,19 @@ int main()
 	CTreeStatic.pcGetRoot()->vAddNewChild();
 	CTreeStatic.pcGetRoot()->vAddNewChild();
 	CTreeStatic.vPrintTree();
+	cout << endl;
+	CNodeDynamic CNodeDynamic;
+	CNodeDynamic.vAddNewChild();
+	CNodeDynamic.vAddNewChild();
+	CNodeDynamic.pcGetChild(0)->vSetValue(1);
+	CNodeDynamic.pcGetChild(1)->vSetValue(2);
+	CNodeDynamic.pcGetChild(0)->vAddNewChild();
+	CNodeDynamic.pcGetChild(0)->vAddNewChild();
+	CNodeDynamic.pcGetChild(0)->pcGetChild(0)->vSetValue(11);
+	CNodeDynamic.pcGetChild(0)->pcGetChild(1)->vSetValue(12);
+	CNodeDynamic.pcGetChild(1)->vAddNewChild();
+	CNodeDynamic.pcGetChild(1)->vAddNewChild();
+	CNodeDynamic.pcGetChild(1)->pcGetChild(0)->vSetValue(21);
+	CNodeDynamic.pcGetChild(1)->pcGetChild(1)->vSetValue(22);
+	CNodeDynamic.vPrintAllBelow();
 }

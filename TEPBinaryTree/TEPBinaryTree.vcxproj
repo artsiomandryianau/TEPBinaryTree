@@ -153,12 +153,14 @@
   <ItemGroup>
     <ClInclude Include="CNodeDynamic.h" />
     <ClInclude Include="CNodeStatic.h" />
+    <ClInclude Include="CTreeDynamic.h" />
     <ClInclude Include="CTreeStatic.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CNodeDynamic.cpp" />
     <ClCompile Include="CNodeStatic.cpp" />
+    <ClCompile Include="CTreeDynamic.cpp" />
     <ClCompile Include="CTreeStatic.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
