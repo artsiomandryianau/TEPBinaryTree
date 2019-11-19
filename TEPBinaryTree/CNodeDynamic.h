@@ -1,6 +1,4 @@
-#ifndef CNodeDynamic_H
-#define CNodeDynamic_H
-
+#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
@@ -11,35 +9,20 @@ class  CNodeDynamic {
 
 public:
 
-	CNodeDynamic()
-	{
-		i_val = 0;
-		pc_parent_node = NULL;
-	};
-
+	CNodeDynamic();
 	~CNodeDynamic();
 
-	void  vSetValue(int  iNewVal)
-	{
-		i_val = iNewVal;
-	};
+	CNodeDynamic* pcGetChild(int  iChildOffset);
 
-	int  iGetChildrenNumber()
-	{
-		return(v_children.size());
-	};
-
+	void vSetValue(int iNewVal);
+	int iGetChildrenNumber();
 	void  vAddNewChild();
-
-	CNodeDynamic *pcGetChild(int  iChildOffset);
-
-	void  vPrint() { cout << " " << i_val; };
+	void  vPrint();
 	void  vPrintAllBelow();
 
 private:
-	vector <CNodeDynamic *>  v_children;
-	CNodeDynamic *pc_parent_node;
+	vector <CNodeDynamic*>  v_children;
+	CNodeDynamic* pc_parent_node;
 	int  i_val;
-};//class  CNodeDynamic 
-
-#endif
+	const int iDEFAULT_VAL = 0;
+};
