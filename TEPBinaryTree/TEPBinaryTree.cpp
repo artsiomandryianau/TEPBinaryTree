@@ -1,7 +1,7 @@
 #include "CNodeStatic.h"
 #include "CTreeStatic.h"
 #include "CNodeDynamic.h"
-
+#include "CTreeDynamic.h"
 
 int main()
 {
@@ -29,6 +29,8 @@ int main()
 	CTreeStatic.pcGetRoot()->vAddNewChild();
 	CTreeStatic.vPrintTree();
 	cout << endl;
+
+	///////////////////////////////////////////////////////////////
 	CNodeDynamic CNodeDynamic;
 	CNodeDynamic.vAddNewChild();
 	CNodeDynamic.vAddNewChild();
@@ -43,4 +45,22 @@ int main()
 	CNodeDynamic.pcGetChild(1)->pcGetChild(0)->vSetValue(21);
 	CNodeDynamic.pcGetChild(1)->pcGetChild(1)->vSetValue(22);
 	CNodeDynamic.vPrintAllBelow();
+
+	//////////////////////////////////////////////////////////
+	cout << endl;
+	CTreeDynamic CTreeDynamic;
+	CTreeDynamic.pcGetRoot()->vAddNewChild();
+	CTreeDynamic.pcGetRoot()->vAddNewChild();
+	CTreeDynamic.pcGetRoot()->pcGetChild(0)->vSetValue(1);
+	CTreeDynamic.pcGetRoot()->pcGetChild(1)->vSetValue(2);
+	CTreeDynamic.pcGetRoot()->pcGetChild(0)->vAddNewChild();
+	CTreeDynamic.pcGetRoot()->pcGetChild(0)->vAddNewChild();
+	CTreeDynamic.pcGetRoot()->pcGetChild(0)->pcGetChild(0)->vSetValue(11);
+	CTreeDynamic.pcGetRoot()->pcGetChild(0)->pcGetChild(1)->vSetValue(12);
+	CTreeDynamic.pcGetRoot()->pcGetChild(1)->vAddNewChild();
+	CTreeDynamic.pcGetRoot()->pcGetChild(1)->vAddNewChild();
+	CTreeDynamic.pcGetRoot()->pcGetChild(1)->pcGetChild(0)->vSetValue(21);
+	CTreeDynamic.pcGetRoot()->pcGetChild(1)->pcGetChild(1)->vSetValue(22);
+	CTreeDynamic.vPrintTree();
+
 }
